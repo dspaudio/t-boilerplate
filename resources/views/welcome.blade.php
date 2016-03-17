@@ -4,7 +4,7 @@
         <title>Laravel</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
+        <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 height: 100%;
@@ -41,5 +41,6 @@
                 <div class="title">Laravel 5</div>
             </div>
         </div>
+        <script src="{{ elixir('js/app.js') }}"></script>
     </body>
 </html>
