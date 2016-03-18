@@ -3,25 +3,20 @@ var paths = {
     'jquery': './node_modules/jquery/',
     'bootstrap': './node_modules/bootstrap-sass/assets/',
 }
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Sass
- | file for our application, as well as publishing vendor resources.
- |
- */
 
 elixir(function(mix) {
-    mix.sass('app.scss')
-        .copy(paths.bootstrap + 'fonts/bootstrap/**', 'public/fonts/bootstrap')
-        .scripts([
+    // 설치 후 다음 라인은 주석 처리하세요
+    mix.copy(paths.bootstrap + 'fonts/bootstrap/**', 'public/fonts/bootstrap')
+
+    // 스크립트 작업이 없으면 다음 scripts 항목을 주석 처리하세요
+    mix.scripts([
             paths.jquery + "dist/jquery.js",
             paths.bootstrap + "javascripts/bootstrap.js",
             './resources/assets/js/**/*.js',
         ], 'public/js/app.js', './')
+
+    // css 작업이 없으면 다음 항목을 주석 처리하세요
+    mix.sass('app.scss')
         .version([
             'css/app.css',
             'js/app.js'
